@@ -13,10 +13,9 @@ This project focuses on detecting the direction of a sound source using a microp
 ## System Components
 
 * Arduino UNO / Microcontroller
-* 4 Electret Microphones
-* Servo Motor (SG90 / MG995)
-* Analog-to-Digital Conversion
-* Filtering Circuit
+* 4 MAX9814 Microphones
+* Servo Motor (SG90)
+* 1080Pp Web Camera HD
 * Camera Mount
 
 ## Working Principle
@@ -26,7 +25,7 @@ A microphone array captures sound intensity from different angles. The system co
 ## Methodology
 
 1. Sound signals are captured using four microphones.
-2. Signals are amplified and filtered to remove environmental noise.
+2. Signals are amplified and filtered (Low Pass Filter, High Pass Filter, Median Filter) to remove environmental noise.
 3. Arduino reads analog values and applies amplitude comparison logic.
 4. The angle of the servo is calculated.
 5. Camera rotates toward the detected direction.
@@ -34,7 +33,6 @@ A microphone array captures sound intensity from different angles. The system co
 ## Applications
 
 * Online meetings and live seminars
-* Surveillance and security systems
 * Smart classrooms and robotics
 * Video conferencing
 
@@ -49,6 +47,7 @@ A microphone array captures sound intensity from different angles. The system co
 * Replace amplitude-based comparison with TDOA (Time Difference of Arrival)
 * Integrate face tracking using OpenCV
 * Wireless sound direction tracking
+* Speech Recognition
 
 
 ## References
